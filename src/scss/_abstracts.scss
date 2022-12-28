@@ -15,17 +15,10 @@
     background-image: linear-gradient(180deg, rgba(255, 111, 72, 1),rgba(240, 42, 166, 1));
 }
 
-@mixin gradient-primary-hover {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
-}
-
-@mixin gradient-secondary {
-    background-image: linear-gradient(180deg, rgba(77,81,255,1), rgba(240, 42, 166, 1));   
-}
-
-@mixin gradient-secondary-hover {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
-}
+@mixin flex {
+    display: flex;
+    flex-direction: column;
+  }
 
 // UTILITY CLASS 
 

@@ -15,12 +15,18 @@ html {
 }
 
 img {
+    min-width: auto;
     max-width: 100%;
     display: block;
   }
 
 a {
     text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
 }
 
 // GRID CONTAINER

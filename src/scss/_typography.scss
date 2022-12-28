@@ -1,29 +1,61 @@
-//GLOBAL 
+//GLOBAL
 body {
-    font-family: sans-serif;
-    font-weight: 500;
-    line-height: 2.8rem;
+  font-family: "Open Sans";
+  font-weight: 400;
+  line-height: 2.1rem;
+  text-align: center;
+}
+
+// HEADINGS
+.heading-1 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+}
+
+.heading-2 {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.heading-3 {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+
+//BODY
+.body {
+  font-size: 1.4rem;
 }
 
 // BUTTONS
 .btn {
-    &,
-    &:link,
-    &:visited {
-      display: inline-block;
-      text-transform: capitalize;
-      text-decoration: none;
-      padding: 1.4rem 3.2rem;
-      border-radius: 2.8rem;
-      transition: all 0.2s;
-      position: relative;
-      font-size: inherit;
-      font-weight: inherit;
-      line-height: inherit;
-      letter-spacing: .5px;  
-      color: white; 
-      border: none;
-      cursor: pointer;
-      white-space: nowrap;
+  &,
+  &:link,
+  &:visited {
+    padding: 1.2rem 3.2rem;
+    color: white;
+    background: #2f65f8;
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all 0.2s;
+    position: relative;
+    border: none;
+    white-space: nowrap;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.15925);
+    border-radius: 3.125px;
+
+    &--2 {
+      box-shadow: 1px 1px 3px rgba(7, 4, 59, 0.157043);
+      border-radius: 1.47059px;
     }
+  }
 }
