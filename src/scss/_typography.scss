@@ -11,6 +11,12 @@ body {
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 3.6rem;
+
+  @media only screen and (min-width: $bp-l) {
+    font-family: "Raleway";
+    font-size: 4rem;
+    line-height: 6rem;
+  }
 }
 
 .heading-2 {
@@ -18,6 +24,11 @@ body {
   font-weight: 700;
   font-size: 1.6rem;
   line-height: 2.4rem;
+
+  @media only screen and (min-width: $bp-l) {
+    font-size: 4rem;
+    line-height: 4.7rem;
+  }
 }
 
 .heading-3 {
@@ -25,11 +36,22 @@ body {
   font-weight: 700;
   font-size: 1.8rem;
   line-height: 2.4rem;
+
+  @media only screen and (min-width: $bp-l) {
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+  }
 }
 
 //BODY
 .body {
   font-size: 1.4rem;
+  line-height: 2.1rem;
+
+  @media only screen and (min-width: $bp-l) {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
 }
 
 // BUTTONS
@@ -42,20 +64,66 @@ body {
     background: #2f65f8;
     font-family: "Raleway";
     font-weight: 700;
-    font-size: 1.4rem;
-    line-height: 1.6rem;
     text-transform: capitalize;
     text-decoration: none;
     transition: all 0.2s;
     position: relative;
     border: none;
     white-space: nowrap;
-    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.15925);
     border-radius: 3.125px;
+    cursor: pointer;
+  }
 
-    &--2 {
-      box-shadow: 1px 1px 3px rgba(7, 4, 59, 0.157043);
-      border-radius: 1.47059px;
+  &:hover {
+    background-color: #6c9bff;
+  }
+
+  &--1 {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.15925);
+  }
+
+  &--2 {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    box-shadow: 1px 1px 3px rgba(7, 4, 59, 0.157043);
+    border-radius: 1.47059px;
+
+    @media only screen and (min-width: $bp-l) {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      padding: 1.6rem 2.2rem;
     }
   }
 }
+
+// INPUT
+.input {
+  font-family: "raleway";
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: #07043b;
+
+  &::placeholder {
+    color: rgba(194, 194, 194, 1);
+  }
+
+  &:invalid:focus {
+    outline: 1px solid #EF4877;
+
+    & ~ .requirements {
+      display: block;
+    }
+  }
+
+
+}
+
+// FORM REQUIRMENTS
+.requirements {
+  display: none;
+}
+
+
+

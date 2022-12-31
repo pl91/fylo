@@ -1,10 +1,21 @@
 .info {
   @include flex;
 
+  @media only screen and (min-width: $bp-s) {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-row: repeat(2, fit-content);
+    text-align: left;
+  }
+
   &__image-box-1 {
-    
+
     img {
-        min-width: 100%;
+      min-width: 100%;
+    }
+
+    @media only screen and (min-width: $bp-s) {
+      grid-column: 1 / -1;
     }
   }
 
@@ -13,8 +24,25 @@
     padding: 0 2.8rem;
     padding-top: 5rem;
 
+    @media only screen and (min-width: $bp-s) {
+      grid-column: 8 / -1;
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+
     img {
-        margin: 0 auto;
+
+      @media only screen and (min-width: $bp-s) {
+        max-width: 50%;
+        padding-right: 8rem;
+      }
+
+      @media only screen and (min-width: $bp-s) {
+        max-width: 100%;
+        max-width: 100%;
+        margin-top: -6.75rem;
+      }
     }
   }
 
@@ -22,13 +50,34 @@
     padding: 8.7rem 3.5rem 8.2rem 3.5rem;
     background-color: #f8f8fe;
 
+    @media only screen and (min-width: $bp-s) {
+      grid-column: 1 / 8;
+      grid-row: 2 / 3;
+      padding-top: 2rem;
+      padding-left: 2.4rem;
+    }
+
+    @media only screen and (min-width: $bp-m) {
+      padding-left: 8rem;
+    }
+
     .heading-2 {
       margin-bottom: 2.4rem;
     }
 
     .body {
-      margin-bottom: 1.6rem;
+      padding-bottom: 1.6rem;
       color: rgba(97, 95, 126, 1);
+      max-width: 53rem;
+      margin: auto;
+
+      @media only screen and (min-width: $bp-s) {
+        margin: 0;
+      }
+
+      @media only screen and (min-width: $bp-xl) {
+        max-width: 40vw;
+      }
     }
 
     .cta {
@@ -43,6 +92,10 @@
       max-width: fit-content;
       font-size: 1.2rem;
       line-height: 1.6rem;
+
+      @media only screen and (min-width: $bp-s) {
+        margin: 0;
+      }
 
       .icon-box {
         display: inline-block;
@@ -61,14 +114,22 @@
       box-shadow: 0px 0px 8px 4px rgba(56, 56, 56, 0.0458843);
       border-radius: 3.93258px;
       padding: 2.1rem 1.25rem 2.1rem 2.6rem;
-      font-size: 10px;
-      line-height: 18px;
+      font-size: 1rem;
+      line-height: 1.8rem;
       letter-spacing: 0.384615px;
 
-      &__icon-box {
+      @media only screen and (min-width: $bp-s) {
+        margin-left: 0;
       }
 
-      &__text {
+      @media only screen and (min-width: $bp-l) {
+        font-size: 1.3rem;
+        line-height: 2.3rem;
+        letter-spacing: 0.5px;
+      }
+
+      @media only screen and (min-width: $bp-xl) {
+        max-width: 60%;
       }
 
       &__user {
@@ -88,15 +149,27 @@
 
           .name {
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: .9rem;
             line-height: 1.2rem;
-            letter-spacing: 0.45px;
+            letter-spacing: .45px;
+
+            @media only screen and (min-width: $bp-l) {
+              font-size: 1.1rem;
+              line-height: 1.5rem;
+              letter-spacing: .55px;
+            }
           }
 
           .occupation {
-            font-size: 0.6rem;
+            font-size: .6rem;
             line-height: 1.2rem;
-            letter-spacing: 0.3px;
+            letter-spacing: .3px;
+
+            @media only screen and (min-width: $bp-l) {
+              font-size: .8rem;
+              line-height: 1.5rem;
+              letter-spacing: .4px;
+            }
           }
         }
       }

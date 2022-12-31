@@ -2,17 +2,75 @@
     background-color: rgba(7, 4, 59, 1);
     color: white;
     padding: 6.5rem 3.9rem 4.2rem 3.8rem;
+    @include flex;
+    gap: 3.2rem;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 1.6rem;
 
-    &__logo-box {
+    @media only screen and (min-width: $bp-s) {
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        padding-top: 15.7rem;
+        padding: 15.7rem 2.4rem 4.2rem 2.4rem;
+      }
 
+      @media only screen and (min-width: $bp-m) {
+        padding-left: 8rem;
+        padding-right: 8rem;
+      }  
+
+    &__logo {      
+        fill: #fff;
+        max-width:  10.5rem;
+        max-height: 3.1rem;
+        margin-bottom: 1.6rem;
     }
 
     &__contact {
+        @include flex;
+        gap: 1.6rem;
         
+        @media only screen and (min-width: $bp-s) {
+            margin-top: -6.5rem;
+          }
+
+        .contact-info {
+            display: flex;
+            gap: 1.6rem;
+        }
+    }
+
+    &__nav {
+        @include flex;
+        gap: 3.2rem;
+
+        @media only screen and (min-width: $bp-s) {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-grow: .25;
+          }
+    }
+
+    &__links {
+        @include flex;
+        gap: 1.6rem;
     }
 
     &__socials {
+        align-self: center;
+        display: flex;
+        gap: 1.08rem;
+        align-items: center;
 
+        @media only screen and (min-width: $bp-s) {
+            align-self: flex-start;
+          }
+        
+          @media only screen and (min-width: $bp-l) {
+            transform: translateX(-12rem);
+          }
     }
     .icon-box {
         display: inline-block;

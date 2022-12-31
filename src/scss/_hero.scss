@@ -5,13 +5,57 @@
     align-items: center;
     gap: 4rem;
 
+    @media only screen and (min-width: $bp-s) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        text-align: left;
+      }
+
+      @media only screen and (min-width: $bp-m) {
+        margin: 8.6rem 8rem;
+      }
+
+    &__img {
+      max-width: 80%;
+      
+      @media only screen and (min-width: $bp-s) {
+        max-width: 35%;
+      }
+
+      @media only screen and (min-width: $bp-l) {
+        max-width: 50%;
+      }
+    }
+
     &__content {
         color: #07043B;
         @include flex;
         gap: 2.4rem;
 
+        .heading-1 {
+
+          @media only screen and (min-width: $bp-s) {
+            align-items: flex-start;
+            max-width: 63rem;
+          }
+
+          @media only screen and (min-width: $bp-xl) {
+            max-width: max-content;
+          }
+        }
+
         .body {
            padding: 0 1rem; 
+
+           @media only screen and (min-width: $bp-s) {
+            align-items: flex-start;
+            padding: 0;
+            max-width: 54rem;
+          }
+
+          @media only screen and (min-width: $bp-xl) {
+            max-width: 30vw;
+          }
         }
     }
 
@@ -19,17 +63,34 @@
         margin: .8rem;
         @include flex;
         gap: 1.6rem;
+        position: relative;
+       
+
+        @media only screen and (min-width: $bp-s) {
+            flex-direction: row;
+            margin: 0;
+
+            .input {
+              min-width: 21vw;
+            }
+
+            .btn {
+              min-width: 13vw;
+            }
+          }
 
         .input {
-            color: rgba(194, 194, 194, 1);
             padding: 1.4rem 0 1.3rem 2.1rem;
             border: 0.625px solid #07043B;
             border-radius: 3.125px;
             box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.15925);
-            font-family: "raleway";
-            font-size: 1.2rem;
-            line-height: 1.4rem;
             letter-spacing: 0.4px;
+        }
+
+        .requirements {
+          position: absolute;
+          bottom: -2.5rem;
+          color: #EF4877;
         }
     }
 }
